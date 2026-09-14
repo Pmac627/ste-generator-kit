@@ -1,0 +1,15 @@
+# Licensed ASD-STE100 source material and its derived agent pack.
+ASD-STE100_ISSUE9.pdf
+work/
+
+# Local Python execution artifacts.
+__pycache__/
+*.py[cod]
+
+# Local development environments.
+.venv/
+venv/
+
+# Operating-system metadata.
+.DS_Store
+Thumbs.db
