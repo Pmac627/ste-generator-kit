@@ -1,0 +1,136 @@
+{
+  "technical_nouns": [
+    {
+      "term": "Anchored Docs",
+      "meaning": "the documentation skill that reads the pack (github.com/Pmac627/anchored-docs)"
+    },
+    {
+      "term": "pack build",
+      "meaning": "the flow that run_all.mjs starts: all stages, then the copy of the handwritten files"
+    },
+    {
+      "term": "kit",
+      "meaning": "this repository: the scripts that make the agent pack from the Issue 9 PDF"
+    },
+    {
+      "term": "pack",
+      "meaning": "the agent pack: the output folder with rules, dictionary, and tools that the kit writes",
+      "unapproved": [
+        "output pack"
+      ]
+    },
+    {
+      "term": "specification",
+      "meaning": "ASD-STE100 Simplified Technical English, Issue 9"
+    },
+    {
+      "term": "stage",
+      "meaning": "one of the 5 extraction scripts that the kit starts in order",
+      "unapproved": [
+        "step script",
+        "phase"
+      ]
+    },
+    {
+      "term": "stage log",
+      "meaning": "the count lines that a stage gives back and run_all.mjs prints"
+    },
+    {
+      "term": "intermediate file",
+      "meaning": "the JSON file that a stage writes into the work folder"
+    },
+    {
+      "term": "work folder",
+      "meaning": "the folder at STE_WORK that holds the intermediate files and the pack"
+    },
+    {
+      "term": "linter",
+      "meaning": "ste_lint.mjs, the checker that the pack contains"
+    },
+    {
+      "term": "dictionary",
+      "meaning": "Part 2 of the specification, or the dictionary files of the pack"
+    },
+    {
+      "term": "rule",
+      "meaning": "a numbered writing rule in Part 1 of the specification"
+    },
+    {
+      "term": "section",
+      "meaning": "one of the 9 sections of Part 1"
+    },
+    {
+      "term": "summary page",
+      "meaning": "the page at the start of a section that lists its rule statements"
+    },
+    "statement",
+    "topic",
+    {
+      "term": "entry",
+      "meaning": "one dictionary row group for one headword and one part of speech"
+    },
+    "headword",
+    "part of speech",
+    {
+      "term": "form",
+      "meaning": "a word form that a dictionary entry lists, for example a past tense"
+    },
+    "help text",
+    {
+      "term": "block",
+      "meaning": "a group of lines that a stage keeps together: a paragraph, a list, a help note, or an example group"
+    },
+    {
+      "term": "region",
+      "meaning": "the part of a dictionary page between 2 full-width separators"
+    },
+    {
+      "term": "separator",
+      "meaning": "a thin rectangle that the PDF draws between dictionary entries or rows"
+    },
+    {
+      "term": "gap",
+      "meaning": "the vertical distance between 2 lines, in points"
+    },
+    "column",
+    "glyph",
+    "character",
+    "rectangle",
+    "curve",
+    "indent",
+    "font size",
+    "xref stream",
+    "object stream",
+    "encryption",
+    "byte-identical",
+    "hyperlink",
+    "integer",
+    {
+      "term": "list",
+      "meaning": "a list block, or an ordered group of items in a file"
+    },
+    {
+      "term": "order",
+      "meaning": "the sequence of rules, stages, or sorted items"
+    },
+    {
+      "term": "label",
+      "meaning": "a short text in front of a dictionary line, for example 2."
+    },
+    {
+      "term": "key",
+      "meaning": "the AES key that decrypts the PDF"
+    }
+  ],
+  "technical_verbs": [
+    {
+      "term": "decrypt"
+    },
+    {
+      "term": "decode"
+    },
+    {
+      "term": "extract"
+    }
+  ]
+}
