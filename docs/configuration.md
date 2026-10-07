@@ -3,13 +3,14 @@ type: Reference
 title: Configuration
 description: The two environment values that the kit reads, where it reads them, and their defaults.
 diataxis: reference
-status: draft
+status: stable
 sources:
   - id: entry
     resource: run_all.mjs
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
 verified:
   - { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+  - { by: human:Pmac627, at: 2026-10-07T22:30:00Z }
 ---
 
 # Configuration

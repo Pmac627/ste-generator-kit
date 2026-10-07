@@ -3,13 +3,14 @@ type: Flow
 title: Pack linter
 description: How the linter in the pack checks a Markdown file against the mechanical rules and the dictionary of the pack.
 diataxis: explanation
-status: draft
+status: stable
 sources:
   - id: linter
     resource: handwritten/ste_lint.mjs
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
 verified:
   - { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+  - { by: human:Pmac627, at: 2026-10-07T22:30:00Z }
 tags: [linter, pack]
 ---
 

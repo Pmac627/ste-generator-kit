@@ -3,7 +3,7 @@ type: Architecture
 title: Architecture
 description: The shape of the kit: an entry script, a PDF reader in three layers, five extraction stages, and the handwritten pack files.
 diataxis: explanation
-status: draft
+status: stable
 sources:
   - id: entry
     resource: run_all.mjs
@@ -16,6 +16,7 @@ sources:
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
 verified:
   - { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+  - { by: human:Pmac627, at: 2026-10-07T22:30:00Z }
 ---
 
 # Architecture
@@ -60,6 +61,7 @@ The kit uses only the built-in modules of Node.js: `node:fs`, `node:path`, `node
 
 - `node --test "tests/unit/*.test.mjs"` starts the unit tests. They do not use a PDF or Python.
 - `tests/PARITY.md` tells how we compared the kit with the Python kit. It also gives each intended difference.
+- [Testing](testing.md) tells how to run the tests and the tools that compare the kit with the Python kit.
 
 ## Where to go next
 

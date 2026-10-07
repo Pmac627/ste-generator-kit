@@ -3,7 +3,7 @@ type: Flow
 title: Pack build
 description: How one command turns the Issue 9 PDF into a complete agent pack in the work folder.
 diataxis: explanation
-status: draft
+status: stable
 sources:
   - id: entry
     resource: run_all.mjs
@@ -14,6 +14,7 @@ sources:
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
 verified:
   - { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+  - { by: human:Pmac627, at: 2026-10-07T22:30:00Z }
 tags: [pipeline, entry-point]
 ---
 
