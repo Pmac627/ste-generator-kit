@@ -3,7 +3,7 @@ type: Flow
 title: Dictionary extraction
 description: How the kit turns the four-column dictionary pages of Part 2 into one structured entry for each headword and part of speech.
 diataxis: explanation
-status: draft
+status: stable
 sources:
   - id: parse
     resource: extract/parse_dict.mjs
@@ -12,6 +12,7 @@ sources:
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
 verified:
   - { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+  - { by: human:Pmac627, at: 2026-10-07T22:30:00Z }
 tags: [dictionary, part-2]
 ---
 

@@ -3,7 +3,7 @@ type: Flow
 title: PDF read
 description: How the kit gets characters, rectangles, curves, words, and page text from the encrypted Issue 9 PDF with no external package.
 diataxis: explanation
-status: draft
+status: stable
 sources:
   - id: reader
     resource: extract/_pdf.mjs
@@ -13,9 +13,11 @@ sources:
     resource: extract/_words.mjs
   - id: tables
     resource: extract/_pdf_tables.mjs
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T22:00:00Z }
 verified:
   - { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+  - { by: claude-code/claude-opus-5-5, at: 2026-10-07T22:00:00Z }
+  - { by: human:Pmac627, at: 2026-10-07T22:30:00Z }
 tags: [pdf, geometry]
 ---
 
@@ -55,6 +57,16 @@ flowchart LR
 - `makeFont` in `extract/_layout.mjs` uses the AFM widths in `AFM` from `extract/_pdf_tables.mjs` when `BaseFont` is `Helvetica`, as pdfminer does.
 - `pageObjects` in `extract/_layout.mjs` puts a closed path with 4 square corners into `rects`. It puts each other painted path into `curves`. It ignores a path that is 1 line.
 - `extractWords` in `extract/_words.mjs` puts characters in groups by font when the stage gives `fontname`. It then makes lines with the tolerance `TOL` = 3. It divides words at a space or at a gap of more than `TOL`.
+
+## Text of a character
+
+- `makeFont` in `extract/_layout.mjs` makes a `toUni` function for each font. That function gives the text of each character code.
+- A simple font uses its ToUnicode table first. When the table has no entry for a code, the font uses `WIN_ANSI` from `extract/_pdf_tables.mjs`.
+- A Type0 font uses only its ToUnicode table. Its character codes have 2 bytes.
+- `parseToUnicode` in `extract/_layout.mjs` reads the `bfchar` and `bfrange` sections of a ToUnicode table. A `bfrange` with 1 destination increases the last bytes of that destination for each code in the range.
+- `addUni` in `extract/_layout.mjs` decodes each destination as UTF-16BE. `addUni` keeps a space when the table also maps the same code to a no-break space, as pdfminer does.
+- A code with no text gives the text `(cid:N)`, where N is the code. `pageObjects` in `extract/_layout.mjs` puts that text on the character, as pdfminer does.
+- `parseToUnicode` in `_layout.mjs` stops with an error on a `cidchar` or `cidrange` section, and on a glyph name as a destination. Issue 9 uses none of them.
 
 ## pdfminer behavior that the reader keeps
 

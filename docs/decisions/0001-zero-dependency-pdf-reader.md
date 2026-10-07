@@ -15,6 +15,7 @@ sources:
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
 verified:
   - { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+  - { by: human:Pmac627, at: 2026-10-07T22:30:00Z }
 ---
 
 # 0001: Read the PDF with a small reader that uses only Node.js

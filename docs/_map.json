@@ -123,13 +123,27 @@
       "docs": [
         "docs/decisions/0001-zero-dependency-pdf-reader.md",
         "docs/decisions/0002-keep-python-output.md",
-        "docs/decisions/0003-dictionary-line-order.md"
+        "docs/decisions/0003-dictionary-line-order.md",
+        "docs/testing.md"
+      ]
+    },
+    {
+      "code": "tests/helpers/**",
+      "docs": [
+        "docs/testing.md"
       ]
     },
     {
       "code": "tests/tools/**",
       "docs": [
-        "docs/decisions/0002-keep-python-output.md"
+        "docs/decisions/0002-keep-python-output.md",
+        "docs/testing.md"
+      ]
+    },
+    {
+      "code": "tests/unit/**",
+      "docs": [
+        "docs/testing.md"
       ]
     }
   ]

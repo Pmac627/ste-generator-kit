@@ -3,7 +3,7 @@ type: Flow
 title: Rules extraction
 description: How the kit turns the pages of Part 1 into the 53 rules, each with its statement, topic, and typed blocks of text, help, and examples.
 diataxis: explanation
-status: draft
+status: stable
 sources:
   - id: parse
     resource: extract/parse_rules.mjs
@@ -12,6 +12,7 @@ sources:
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
 verified:
   - { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+  - { by: human:Pmac627, at: 2026-10-07T22:30:00Z }
 tags: [rules, part-1]
 ---
 

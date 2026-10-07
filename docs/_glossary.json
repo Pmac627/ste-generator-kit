@@ -1,10 +1,6 @@
 {
   "technical_nouns": [
     {
-      "term": "Anchored Docs",
-      "meaning": "the documentation skill that reads the pack (github.com/Pmac627/anchored-docs)"
-    },
-    {
       "term": "pack build",
       "meaning": "the flow that run_all.mjs starts: all stages, then the copy of the handwritten files"
     },
@@ -103,16 +99,6 @@
     "object stream",
     "encryption",
     "byte-identical",
-    "hyperlink",
-    "integer",
-    {
-      "term": "list",
-      "meaning": "a list block, or an ordered group of items in a file"
-    },
-    {
-      "term": "order",
-      "meaning": "the sequence of rules, stages, or sorted items"
-    },
     {
       "term": "label",
       "meaning": "a short text in front of a dictionary line, for example 2."
@@ -120,6 +106,10 @@
     {
       "term": "key",
       "meaning": "the AES key that decrypts the PDF"
+    },
+    {
+      "term": "case",
+      "meaning": "one test input with its expected result"
     }
   ],
   "technical_verbs": [

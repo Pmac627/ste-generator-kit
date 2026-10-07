@@ -3,7 +3,7 @@ type: Flow
 title: Pack generation
 description: How the kit writes the rule files, the dictionary files, and the technical categories of the agent pack from the structured rules and entries.
 diataxis: explanation
-status: draft
+status: stable
 sources:
   - id: generate
     resource: extract/generate.mjs
@@ -12,6 +12,7 @@ sources:
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
 verified:
   - { by: claude-code/claude-opus-5-5, at: 2026-10-07T16:00:00Z }
+  - { by: human:Pmac627, at: 2026-10-07T22:30:00Z }
 tags: [pack, output]
 ---
 

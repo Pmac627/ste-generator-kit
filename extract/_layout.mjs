@@ -64,7 +64,7 @@ function nunpack(buf) {
 
 function addUni(map, cid, code) {
   const u = utf16be(code);
-  if (u === ' ' && map.get(cid) === ' ') {
+  if (u === '\u00a0' && map.get(cid) === ' ') {
     return;
   }
   map.set(cid, u);
