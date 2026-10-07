@@ -68,9 +68,9 @@ test('structure_dict: approval follows Python isupper(), so a headword without l
 test('generate: approved-wordforms.txt sorts by code point, not UTF-16 unit', () => {
   const work = mkdtempSync(join(tmpdir(), 'ste-gen-'));
   try {
-    const D = [{ word: 'A', pos: 'n', approved: true, page: 'x', forms: ['￿', '😀', 'b'], meanings: [] }];
+    const D = [{ word: 'A', pos: 'n', approved: true, page: 'x', forms: ['\uffff', '😀', 'b'], meanings: [] }];
     generate(structured.data, D, work);
-    assert.equal(readFileSync(join(work, 'pack', 'dictionary', 'approved-wordforms.txt'), 'utf8'), 'a\nb\n￿\n😀\n');
+    assert.equal(readFileSync(join(work, 'pack', 'dictionary', 'approved-wordforms.txt'), 'utf8'), 'a\nb\n\uffff\n😀\n');
   } finally {
     rmSync(work, { recursive: true, force: true });
   }
