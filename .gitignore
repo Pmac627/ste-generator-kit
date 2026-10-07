@@ -1,6 +1,16 @@
-# Licensed ASD-STE100 source material and its derived agent pack.
-ASD-STE100_ISSUE9.pdf
+# Licensed ASD-STE100 source material and its derived agent pack. These patterns match anywhere in the
+# kit, so a PDF under any name, a relative STE_WORK, or a copied pack never reaches a commit.
+*.pdf
 work/
+pack/
+asd-ste100-agent-pack/
+# Intermediate files that run_all.mjs writes into STE_WORK (they contain specification text).
+dict_raw.json
+dict_entries.json
+rules_raw.json
+rules_structured.json
+# Output of tests/tools/dump_prims.py, which holds the text of every page.
+prims*.json
 
 # Python artifacts from the developer parity tools in tests/tools/ (the kit itself does not use Python).
 __pycache__/

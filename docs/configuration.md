@@ -38,4 +38,4 @@ The kit has no configuration file. It reads 2 environment values from `process.e
   - Raw: the command-line code at the end of `run_all.mjs`, which gives the path to `runAll`
 - The folder for the intermediate files and for `pack/`. `run_all.mjs` finds a relative path from the kit folder `KIT`. `runAll` makes the folder when the folder is not there.
 
-The `.gitignore` file of the kit tells Git to ignore the default PDF name and `work/`. ASD has the copyright of the content in the PDF and in the pack.
+The `.gitignore` file of the kit tells Git to ignore each PDF, each `work/` and `pack/` folder, and the 4 intermediate files. These patterns apply in all folders of the kit. Thus a relative `STE_WORK` cannot put pack content into a commit. ASD has the copyright of the content in the PDF and in the pack.
