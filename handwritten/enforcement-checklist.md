@@ -60,7 +60,7 @@ How to apply the 53 rules when writing or reviewing text. **Hard** checks are me
 ## 3. Review procedure
 
 1. Classify each block as procedural, descriptive, note, or safety.
-2. Run `tools/ste_lint.py --mode <type>` for the hard checks; treat exit code 1 as blocking.
+2. Run `node tools/ste_lint.mjs FILE --mode <type>` for the hard checks; treat exit code 1 as blocking.
 3. For each `warn` on an unknown word, decide: technical noun/verb in a permitted category (allow, add to the project glossary) or error (replace using `unapproved-lookup.tsv`).
 4. Read for the judgment checks; report them as suggestions with the rule number.
 5. When a fix needs more than a word swap, rewrite the sentence rather than forcing the replacement (9.1).

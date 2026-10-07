@@ -2,7 +2,7 @@
 ASD-STE100_ISSUE9.pdf
 work/
 
-# Local Python execution artifacts.
+# Python artifacts from the developer parity tools in tests/tools/ (the kit itself does not use Python).
 __pycache__/
 *.py[cod]
 
@@ -13,3 +13,6 @@ venv/
 # Operating-system metadata.
 .DS_Store
 Thumbs.db
+
+# Per-ticket agent scratch notes (Anchored Docs). Never part of the living docs.
+docs/tickets/
