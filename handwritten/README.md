@@ -28,7 +28,8 @@ dictionary/
   unapproved-lookup.tsv       grep-friendly: word -> alternatives -> help
   ste-dictionary.json         full fidelity (all examples); ~200K tokens, query it, never load it whole
 tools/
-  ste_lint.py                 reference implementation of the mechanical checks
+  ste_lint.mjs                reference implementation of the mechanical checks (Node.js 22+, no dependencies)
+  extract/                    the scripts that built this pack
 ```
 
 ## Loading strategy for agents
@@ -39,9 +40,9 @@ tools/
 | Writing a procedure or description | add the relevant `rules/section-N-*.md` (Sections 3, 4, 5 or 6, 8) |
 | Checking a specific word | look it up in `unapproved-lookup.tsv` / `approved-words.tsv`, or query `ste-dictionary.json` by `word` + `pos` |
 | Deciding whether an unknown word is allowed | `rules/technical-categories.md` |
-| Automated gate in CI or a skill | `python tools/ste_lint.py FILE --mode procedural|descriptive [--allow glossary.txt]` |
+| Automated gate in CI or a skill | `node tools/ste_lint.mjs FILE --mode procedural|descriptive [--allow glossary.txt]` |
 
-`ste_lint.py` exits 1 on any hard-rule error. Unknown words (not approved, not listed as unapproved) are warnings, because they may be technical nouns/verbs; feed a project glossary with `--allow` to silence known terms (Rule 1.8).
+`ste_lint.mjs` exits 1 on any hard-rule error. Unknown words (not approved, not listed as unapproved) are warnings, because they may be technical nouns/verbs; feed a project glossary with `--allow` to silence known terms (Rule 1.8).
 
 ## Data model (JSON)
 
@@ -65,4 +66,4 @@ Rule (`ste-rules.json`): `{id, section, section_title, topic, statement, blocks[
 
 ## Regenerating
 
-The extraction scripts are in `tools/extract/` (run in order: parse_dict, structure_dict, parse_rules, structure_rules, generate; paths are hardcoded to /home/claude/ste and /mnt/user-data/uploads). Re-extraction needs `pdfplumber` and the Issue 9 PDF; the approach is column geometry from the header row on each dictionary page, full-width rules as entry separators, help detected by the lightbulb icon curves, and font size/weight to separate rule statements from body text.
+The extraction scripts are in `tools/extract/` (stages in order: parse_dict, structure_dict, parse_rules, structure_rules, generate; `_pdf.mjs`, `_layout.mjs`, and `_words.mjs` read the PDF). To regenerate, run `node run_all.mjs` from the ste-generator-kit with `STE_PDF` and `STE_WORK` set. Re-extraction needs Node.js 22+ and the Issue 9 PDF, nothing else; the approach is column geometry from the header row on each dictionary page, full-width rules as entry separators, help detected by the lightbulb icon curves, and font size/weight to separate rule statements from body text.

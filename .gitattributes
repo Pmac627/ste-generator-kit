@@ -1,0 +1,7 @@
+# Check out text files with LF on every OS, whatever core.autocrlf says. run_all.mjs copies the
+# handwritten files into the pack byte for byte, and every generated pack file uses LF
+# (tests/PARITY.md, intended difference 1).
+* text=auto eol=lf
+
+# Binary inputs, if one is ever placed in the kit folder (the licensed PDF is also in .gitignore).
+*.pdf binary
